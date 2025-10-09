@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica con formularios</title>
+</head>
+<body>
+    <form method="post" action="url_de_destino">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" name="Nombre">
+        <label for="Apellido">Apellido:</label>
+        <input type="text" name="Apellido">
+        <p></p>
+        <label for="provincia">Provincia:</label>
+        <select name="prvincia" id="">
+            <option value="Madrid">Madrid</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Valencia">Valencia</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Granada">Granada</option>
+        </select>
+        <p></p>
+        <label for="genero">Género:</label>
+        <input type="radio" name="genero" value="Hombre"> Hombre
+        <input type="radio" name="genero" value="Mujer"> Mujer
+        <p></p>
+        <textarea name="" id="" cols="30" rows="10">Escribe tus comentarios aquí</textarea>
+        <p></p>
+            <button type="button"></button>
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+            <button type="disable"></button>
+        <p></p>
+        <input type="checkbox" id="terminos">
+    </form>
+</body>
+</html>
