@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario Técnico</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <form class="formulario">
+
+            <div class="seccion verde">
+            <h2>Datos Personales</h2>
+            <label>Apellidos: <input type="text" name="apellidos"></label>
+            <label>Nombre: <input type="text" name="nombre"></label>
+            <label>Email: <input type="email" name="email"></label>
+            <label>Número de contacto: <input type="tel" name="contacto"></label>
+            <label>DNI: <input type="text" name="dni"></label>
+            <label>Fecha de Nacimiento: <input type="date" name="nacimiento"></label>
+            <label>Provincia:
+                <select name="provincia">
+                <option value="">Selecciona</option>
+                <option value="Toledo">Toledo</option>
+                <option value="Madrid">Madrid</option>
+                </select>
+            </label>
+            <div>
+                <span>Sexo:</span>
+                <label><input type="radio" name="sexo" value="hombre"> Hombre</label>
+                <label><input type="radio" name="sexo" value="mujer"> Mujer</label>
+            </div>
+            <div>
+                <span>Dispositivos Preferidos:</span>
+                <label><input type="checkbox" name="dispositivo" value="pc"> PC</label>
+                <label><input type="checkbox" name="dispositivo" value="tablet"> Tableta</label>
+                <label><input type="checkbox" name="dispositivo" value="movil"> Móvil</label>
+            </div>
+            <label>IDE Preferido: <input type="text" name="ide"></label>
+            </div>
+
+            <div class="seccion azul">
+            <h2>Otros datos de interés</h2>
+            <textarea name="otros" rows="5" placeholder="Escribe aquí..."></textarea>
+            </div>
+
+            <div class="seccion morado">
+            <h2>Competencias de Programación</h2>
+            <label>Nivel de Java: <input type="range" name="java" min="0" max="100"></label>
+            <label>Nivel de Python: <input type="range" name="python" min="0" max="100"></label>
+            <label>Nivel de HTML: <input type="range" name="html" min="0" max="100"></label>
+            <label>Nivel de CSS: <input type="range" name="css" min="0" max="100"></label>
+            </div>
+
+            <div class="botones">
+            <button type="button">Activado</button>
+            <button type="reset">Borrar Datos</button>
+            <button type="submit">Enviar Solicitud</button>
+            <button type="button">Desactivado</button>
+            </div>
+
+        </form>
+    </body>
+</html>
