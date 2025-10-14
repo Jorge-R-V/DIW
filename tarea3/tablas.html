@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<br lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,10 +11,10 @@
 
 <br>
 
-    <table>
+    <table id="horarios">
         <caption>HORARIO DE CLASE CURSO 2018-2019</caption>
         <thead>
-            <tr>
+            <tr id="primeraetramayus">
                 <th>HORAS</th>
                 <th>Lunes</th>
                 <th>Martes</th>
@@ -25,25 +25,25 @@
         </thead>
         <tbody>
             <tr>
-                <td>8:00</td>
+                <td id="fondoverde">8:00</td>
                 <td rowspan="2">Matemáticas</td>
                 <td>Lengua</td>
                 <td>Inglés</td>
                 <td colspan="2">Ciencias</td>
             </tr>
             <tr>
-                <td>9:00</td>
+                <td id="fondoverde">9:00</td>
                 <td>Historia</td>
                 <td>Ciencias</td>
                 <td>Matemáticas</td>
                 <td>Lengua</td>
             </tr>
             <tr>
-                <td>10:00</td>
-                <th colspan="5">RECREO</th>
+                <td id="fondoverde">10:00</td>
+                <th colspan="5" id="fondoamarillo">RECREO</th>
             </tr>
             <tr>
-                <td>10:30</td>
+                <td id="fondoverde">10:30</td>
                 <td>Inglés</td>
                 <td rowspan="2">Ciencias</td>
                 <td>Matemáticas</td>
@@ -51,7 +51,7 @@
                 <td>Historia</td>
             </tr>
             <tr>
-                <td>11:30</td>
+                <td id="fondoverde">11:30</td>
                 <td>Historia</td>
                 <td>Ciencias</td>
                 <td>Matemáticas</td>
@@ -59,24 +59,32 @@
             </tr>
         </tbody>
     </table>
+</br></br>
+    <br id="formulariocorreo">
+        <label for="email">Escribe tu correo electrónico:</label>
+        </br>  
+        <input type="email" id="email" name="email" required>
+        </br>   
+        <input type="submit" value="Enviar">
+    </form>
 
     </br>
     </br>
 
     <h1>Ejercicio práctico con Tablas</h1>
 
-        <table>
+        <table id="ipods">
             <caption></caption>
             <thead>
                 <tr>
                     <th></th>
-                    <th colspan="3"><img src="img/120_ipod.png"></th>
-                    <th colspan="2"><img src="img/100_ipod.png" width="100px"></th>
+                    <th colspan="3" id="fondoazul"><img src="img/120_ipod.png"></th>
+                    <th colspan="2" id="fondoazul"><img src="img/100_ipod.png" width="100px"></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th>Capacidad</th>
+                <tr id="fondogris">
+                    <th id="fondorojo">Capacidad</th>
                     <td>
                         <p>2GB</p>
                     </td>
@@ -94,35 +102,35 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>Colores</th>
+                    <th id="fondorojo">Colores</th>
                     <th>Blanco</th>
                     <td>
-                        <ul>
-                            <li>Negro</li>
+                        <ul id="colortexto">
+                            <li >Negro</li>
                             <li>Rosa</li>
                             <li>Dorado</li>
                         </ul>
                     </td>
                     <th>Negro</th>
                     <td colspan="2">
-                        <ul>
+                        <ul id="colortexto fondoazul">
                             <li>Negro</li>
                             <li>Blanco</li>
                         </ul>
                     </td>
                 </tr>
                 <tr>
-                    <th>Pantalla</th>
-                    <th colspan="3">3 pulgadas</th>
-                    <th colspan="2">7 pulgadas</th>
+                    <th id="fondorojo">Pantalla</th>
+                    <th colspan="3" id="fondoazul">3 pulgadas</th>
+                    <th colspan="2" id="fondoazul">7 pulgadas</th>
                 </tr>
                 <tr>
-                    <th rowspan="2">Tiempo de Carga</th>
-                    <th colspan="3" rowspan="2">1 hora</th>
-                    <th colspan="2">5 horas</th>
+                    <th rowspan="2" id="fondorojo">Tiempo de Carga</th>
+                    <th colspan="3" rowspan="2" id="fondoazul">1 hora</th>
+                    <th colspan="2" id="fondoamarillo">5 horas</th>
                 </tr>
                 <tr>
-                    <th colspan="2">30 minutos para 75%</th>
+                    <th colspan="2" id="fondoazul">30 minutos para 75%</th>
                 </tr>
             </tbody>
 

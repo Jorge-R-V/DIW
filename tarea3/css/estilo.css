@@ -1,3 +1,7 @@
+body {
+    text-align: center;
+}
+
 table {
     border-collapse: collapse;
 }
@@ -6,4 +10,33 @@ th,
 td {
     border: 1px solid black;
     padding: 20px;
+}
+
+#colortexto {
+    color: red;
+}
+
+#fondorojo {
+    background-color: red;
+}
+
+#fondogris {
+    background-color: gray;
+}
+
+#fondoazul {
+    background-color: blue;
+}
+
+#fondoamarillo {
+    background-color: yellow;
+}
+
+#fondoverde {
+    background-color: green;
+}
+
+#primeraletramayus::first-letter {
+    font-size: 2em;
+    font-weight: bold;
 }
