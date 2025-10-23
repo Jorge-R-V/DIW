@@ -1,0 +1,16 @@
+header {
+    background-color: rgb(55, 114, 94);
+    color: white;
+    display: flex;
+    padding: 1rem;
+    gap: 10px;
+}
+
+form {
+    margin-left: auto;
+}
+
+form input[type="submit"],
+form button[type="submit"] {
+    color: rgb(55, 114, 94);
+}
