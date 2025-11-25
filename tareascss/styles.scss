@@ -63,4 +63,75 @@ figure.card {
         margin:0.5rem;
         text-align: center;
     }
+
+    //Sistema de maquetación
+
+    //Les doy un tamaño y un borde para distinguirlos
+
+    // Número de columnas para el sistema de maquetación
+    $num_elementos: 4;
+
+    //Función que devuelve la anchura correspondiente al elemento
+    @function anchura_col($i) {
+    @return (100 / $num_elementos)*$i ;
+    }
+
+
+    //Bucle para generar las clases
+    @for $i from 1 through $num_elementos {
+    .row > .col-#{$i} {
+        padding: 1rem;
+        width: #{anchura_col($i)}+ "%";
+    }
+    }
+
+}
+
+// --- Estilos para Botones ---
+
+//Colores de base para botones
+$color-error: #FF0000;
+$color-warning: rgb(239, 241, 120);
+$color-accepted: rgb(55, 138, 0);
+$color-normal: rgb(0, 110, 255);
+$color-shadow: #888;
+
+//Valor del radio para redondear los botones
+$btn-border-radius: 0.4rem;
+
+//Mapa del que cogeremos los nombres para interpolarlos y los valores de los colores
+$btn-colors: ("error" : $color-error,
+    "warning" : $color-warning,
+    "accepted" : $color-accepted,
+    "normal" : $color-normal);
+
+//Elemento botón general
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: $btn-border-radius;
+    padding: 0.5rem;
+    //Estilo para el efecto de cuando pase el ratón por encima
+    &:hover {
+        box-shadow: $btn-border-radius/2 $btn-border-radius/2 $color-shadow;
+    }
+    //Estilo al hacer click en el boton
+    &:active {
+        background-color: orange;
+        color: white;
+    }
+}
+
+//Clase adicional que le da color
+@each $k,
+$v in $btn-colors {
+    .btn-#{$k} {
+        background-color: $v;
+
+        // Para botones oscuros, el texto será blanco
+        @if (lightness($v) < 50) {
+            color: white;
+        }
+    }
 }
