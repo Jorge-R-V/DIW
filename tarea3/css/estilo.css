@@ -1,0 +1,74 @@
+body {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.colortexto {
+    color: red;
+}
+
+.fondorojo {
+    background-color: red;
+}
+
+.fondogris {
+    background-color: gray;
+}
+
+.ipod-img {
+    display: block;
+    margin: 0 auto;
+    max-height: 100px; /* Ajusta según el diseño */
+}
+
+.fondoazul {
+    background-color: blue;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.fondoamarillo {
+    background-color: yellow;
+}
+
+.fondoverde {
+    background-color: green;
+}
+
+.textoverde {
+    color: green;
+}
+
+.primeraetramayus::first-letter {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#formulariocorreo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#formulariocorreo label {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#formulariocorreo input[type="email"] {
+    padding: 10px;
+    width: 250px;
+    font-size: 1em;
+    margin-top: 10px;
+}

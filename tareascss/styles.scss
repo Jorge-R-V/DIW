@@ -1,0 +1,190 @@
+$color-background: #CCC;
+$color-base: #333;
+
+//Menu
+$navbar-background-color: rgb(145,155,111);
+$navbar-color-hover: $color-background;
+
+//bordes
+$border-color: $color-base;
+$border-style: "solid";
+$border-width: 0.1rem;
+$border-radius: 1rem;
+$main-container-width: 80%;
+.container {
+    width: $main-container-width;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: $navbar-background-color;
+    padding: 0.2rem;
+    ul {
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        li{
+            display: inline-block;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            &.active {
+                color: $navbar-color-hover;
+                font-weight: bolder;
+            }
+            &:hover {
+                color: $navbar-color-hover;
+            }
+            a {
+                text-decoration: none;
+            }
+            &.productos-link {
+                color: blue;
+            }
+            &.clientes-link {
+                color: orange;
+            }
+            &.sobre-nosotros-link {
+                color: pink;
+            }
+            &.espaciado {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+figure.card {
+    border: $border-width #{$border-style} $border-color;
+    border-radius: $border-radius;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 1rem;
+    img {
+        border-radius: 2*$border-radius;
+        width: 100%;
+    }
+    figcaption {
+        font-size: 0.8rem;
+        margin:0.5rem;
+        text-align: center;
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+            vertical-align: middle;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+            border: 2px solid black;
+            padding: 0 0.5rem 0 0;
+            border-radius: 1.5rem;
+            display: inline-block;
+            font-weight: bold;
+        }
+    }
+    //Sistema de maquetación
+    //Les doy un tamaño y un borde para distinguirlos
+    // Número de columnas para el sistema de maquetación
+    $num_elementos: 4;
+    //Función que devuelve la anchura correspondiente al elemento
+    @function anchura_col($i) {
+    @return (100 / $num_elementos)*$i ;
+    }
+
+    //Bucle para generar las clases
+    @for $i from 1 through $num_elementos {
+    .row > .col-#{$i} {
+        padding: 1rem;
+        width: #{anchura_col($i)}+ "%";
+    }
+    }
+
+    // Colores de fondo para cada tarjeta
+    &:nth-of-type(1) {
+        background-color: lightgreen;
+    }
+    &:nth-of-type(2) {
+        background-color: lightblue;
+    }
+    &:nth-of-type(3) {
+        background-color: orange;
+    }
+    &:nth-of-type(4) {
+        background-color: pink;
+    }
+}
+
+// --- Media Queries para Responsividad ---
+@media (min-width: 768px) {
+    nav ul {
+        flex-wrap: nowrap;
+    }
+    figure.card {
+        width: calc(50% - 0.5rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    figure.card {
+        width: calc(25% - 0.75rem);
+    }
+}
+
+@media (max-width: 767px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+// --- Estilos para Botones ---
+//Colores de base para botones
+$color-error: #FF0000;
+$color-warning: rgb(239, 241, 120);
+$color-accepted: rgb(55, 138, 0);
+$color-normal: rgb(0, 110, 255);
+$color-shadow: #888;
+
+//Valor del radio para redondear los botones
+$btn-border-radius: 0.4rem;
+
+//Mapa del que cogeremos los nombres y los valores de los colores
+$btn-colors: ("error" : $color-error,
+    "warning" : $color-warning,
+    "accepted" : $color-accepted,
+    "normal" : $color-normal);
+
+//Elemento botón general
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: $btn-border-radius;
+    padding: 0.5rem;
+    //Estilo para el efecto de cuando pase el ratón por encima
+    &:hover {
+        box-shadow: $btn-border-radius/2 $btn-border-radius/2 $color-shadow;
+    }
+    //Estilo al hacer click en el boton
+    &:active {
+        background-color: orange;
+        color: white;
+    }
+}
+//Clase adicional que le da color
+@each $k,
+$v in $btn-colors {
+    .btn-#{$k} {
+        background-color: $v;
+        @if (lightness($v) < 50) {
+            color: white;
+        }
+    }
+}

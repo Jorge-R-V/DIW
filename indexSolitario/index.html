@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDIE REVOLUTION - Noticias Indie Gaming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0f1419;
+            color: #fff;
+        }
+
+        .cabecera {
+            background: #1a1f2e;
+            border-bottom: 2px solid #00ff88;
+            padding: 1rem 0;
+        }
+
+        .menu {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00ff88;
+        }
+
+        .enlacesMenu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .enlacesMenu a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .enlacesMenu a:hover {
+            color: #00ff88;
+        }
+
+        .titulo {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .titulo h1 {
+            font-size: 3rem;
+            color: #00ff88;
+            margin-bottom: 0.5rem;
+        }
+
+        .titulo p {
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+
+        .cuerpo {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .ultimaNoticia {
+            background: #1a1f2e;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 2px solid #00ff88;
+        }
+
+        .cajaUltimaNoticia {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .imagenUltimaNoticia {
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .imagenUltimaNoticia img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contenidoUltimaNoticia h2 {
+            font-size: 2rem;
+            color: #00ff88;
+            margin-bottom: 1rem;
+        }
+
+        .contenidoUltimaNoticia p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .cabeceraNoticias {
+            font-size: 2rem;
+            color: #00ff88;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .noticias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .noticia {
+            background: #1a1f2e;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .noticia:hover {
+            transform: translateY(-5px);
+        }
+
+        .imagenNoticia {
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .imagenNoticia img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contenidoNoticia {
+            padding: 1.5rem;
+        }
+
+        .contenidoNoticia h3 {
+            color: #00ff88;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .contenidoNoticia p {
+            color: #aaa;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background: #1a1f2e;
+            border-top: 2px solid #00ff88;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .redes {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .redes a {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        .redes a:hover {
+            color: #00ff88;
+        }
+
+        .footer p {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                padding: 0 1rem;
+            }
+
+            .enlacesMenu {
+                display: none;
+            }
+
+            .titulo {
+                padding: 2rem 1rem;
+            }
+
+            .titulo h1 {
+                font-size: 2rem;
+            }
+
+            .cuerpo {
+                padding: 1rem;
+            }
+
+            .ultimaNoticia {
+                padding: 1.5rem;
+            }
+
+            .cajaUltimaNoticia {
+                grid-template-columns: 1fr;
+            }
+
+            .noticias {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="cabecera">
+        <div class="menu">
+            <div class="logo">INDIE REVOLUTION</div>
+            <ul class="enlacesMenu">
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#comunidad">Comunidad</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="titulo">
+        <h1>INDIE REVOLUTION</h1>
+        <p>Las últimas noticias del mundo indie</p>
+    </section>
+
+    <div class="cuerpo">
+        <section class="ultimaNoticia">
+            <div class="cajaUltimaNoticia">
+                <div class="imagenUltimaNoticia">
+                    <img src="https://i.imgur.com/3n2Cawh.jpeg" alt="Imagen de la última noticia">
+                </div>
+                <div class="contenidoUltimaNoticia">
+                    <h2>Hollow Knight: Silksong arrasa con 5 millones de jugadores en 3 días.</h2>
+                    <p>El éxito fue tal que varias plataformas digitales colapsaron por la demanda, un síntoma de que Silksong no solo es un metroidvania más, sino el equivalente indie de un Grand Theft Auto.</p>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="cabeceraNoticias">Noticias</h2>
+        
+        <div class="noticias">
+            <div class="noticia">
+                <div class="imagenNoticia">
+                    <img src="https://i.imgur.com/x9z4pZm.jpeg" alt="Imagen de noticia">
+                </div>
+                <div class="contenidoNoticia">
+                    <h3>OneShot: El juego que SABE QUE EXISTES</h3>
+                    <p>Es un videojuego de aventuras y rompecabezas desarrollado por Future Cat LLC y publicado por DANGEN Entertainment. Lanzado el...</p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <div class="imagenNoticia">
+                    <img src="https://i.imgur.com/7g6zYjG.jpeg" alt="Imagen de noticia">
+                </div>
+                <div class="contenidoNoticia">
+                    <h3>El original y enigmático The Stanley Parable: Ultra Deluxe debuta por todo lo alto en Steam</h3>
+                    <p>Esta semana ha llegado a las tiendas digitales The Stanley Parable: Ultra Deluxe, una reedición del juego que en 2013 sorprendió a todo el mundo por su propuesta repleta de originalidad. El título no ha tenido mucha más promoción que sus cómicos vídeos, pero parece que está funcionando bien en los primeros días.</p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <div class="imagenNoticia">
+                    <img src="https://i.imgur.com/uJq3w9C.jpeg" alt="Imagen de noticia">
+                </div>
+                <div class="contenidoNoticia">
+                    <h3>Tunic: Consiguen traducir exitosamente el lenguaje rúnico inventado del juego</h3>
+                    <p>Este misterio ha sido resuelto por Opsodeo, un usuario de Reddit, en una publicación compartida por Eurogamer. Pese a lo que pueda parecer, este usuario no es lingüista, trabaja como programador y apenas ha superado un par de jefes en el tiempo que ha jugado, pero ha conseguido descifrar el enrevesado lenguaje del juego.</p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <div class="imagenNoticia">
+                    <img src="https://i.imgur.com/y3a6o5E.jpeg" alt="Imagen de noticia">
+                </div>
+                <div class="contenidoNoticia">
+                    <h3>A Expedition 33 se le está poniendo cara de GOTY 2025, y parece inevitable.</h3>
+                    <p>Cuando se presentó Clair Obscur: Expedition 33 por primera vez, sabíamos que era un RPG que prometía mucho, pero pocos pensaban que sería un título tan sobresaliente... </p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <div class="imagenNoticia">
+                    <img src="https://i.imgur.com/2YlA52r.jpeg" alt="Imagen de noticia">
+                </div>
+                <div class="contenidoNoticia">
+                    <h3>RV There Yet?: este nuevo juego cooperativo se está volviendo muy viral y podría ser el nuevo R.E.P.O.</h3>
+                    <p>La premisa de RV There Yet? es más sencilla de lo que parece: tu misión será la de atravesar una ruta alternativa de vuelta a casa en una autocaravana en compañía de hasta 3 amigos. </p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <div class="imagenNoticia">
+                    <img src="https://i.imgur.com/sIqYkpl.jpeg" alt="Imagen de noticia">
+                </div>
+                <div class="contenidoNoticia">
+                    <h3>El gatete que agitó el mundo de los videojuegos está a punto de dar el salto a la gran pantalla. Confirmada una película de Stray</h3>
+                    <p>La llegada de Stray fue un verdadero terremoto en la industria. No lo decimos porque el título de BlueTwelve Studio y Annapurna Interactive sea una experiencia masiva e imprescindible para todo el mundo... </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="redes">
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Contacto</a>
+            <a href="#">Discord</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>

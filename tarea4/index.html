@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4.2: (CSS) - Maquetación clásica CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="display-section">
+        <h2>1. DISPLAY: inline, inline-block y block</h2>
+        
+        <h3>Display: inline <span class="etiqueta">INLINE</span></h3>
+        <div class="inline">
+            <span>Elemento 1</span>
+            <span>Elemento 2</span>
+            <span>Elemento 3</span>
+            <span>No respeta width/height</span>
+        </div>
+
+        <h3>Display: inline-block <span class="etiqueta">INLINE-BLOCK</span></h3>
+        <div class="inline-block">
+            <span>Caja 1</span>
+            <span>Caja 2</span>
+            <span>Caja 3</span>
+        </div>
+
+        <h3>Display: block <span class="etiqueta">BLOCK</span></h3>
+        <div class="block">
+            <div>Bloque 1 - Ocupa todo el ancho</div>
+            <div>Bloque 2 - Cada uno en su línea</div>
+            <div>Bloque 3 - Respeta width y height</div>
+        </div>
+    </div>
+
+    <div class="display-section">
+        <h2>2. LAYOUTS: Fixed, Elastic, Fluid e Híbrido</h2>
+        
+        <div class="layout-fixed">
+            <span class="etiqueta">FIXED</span>
+            <strong>Layout Fixed:</strong> No cambia con la ventana
+        </div>
+
+        <div class="layout-elastic">
+            <span class="etiqueta">ELASTIC</span>
+            <strong>Layout Elastic:</strong> Cambia con el tamaño de fuente
+        </div>
+
+        <div class="layout-fluid">
+            <span class="etiqueta">FLUID</span>
+            <strong>Layout Fluid:</strong> Se adapta a la ventana
+        </div>
+
+        <div class="layout-hibrido">
+            <span class="etiqueta">HÍBRIDO</span>
+            <strong>Layout Híbrido:</strong> Usa lo mejor de los LAYOUTS.
+        </div>
+    </div>
+
+    <div class="display-section">
+        <h2>3. BOX-SIZING: border-box</h2>
+        <span class="etiqueta">BORDER-BOX</span>
+        <p>Todos los elementos usan <code>box-sizing: border-box</code>, por lo que el padding y border se incluyen en el width/height total, facilitando los cálculos de layout.</p>
+    </div>
+
+    <div class="display-section">
+        <h2>4. CENTRADO: Horizontal y Vertical</h2>
+        
+        <h3>Centrado Horizontal - Elementos Inline <span class="etiqueta">H-INLINE</span></h3>
+        <div class="centrado-horizontal-inline">
+            <span>Elemento centrado con text-align</span>
+        </div>
+
+        <h3>Centrado Horizontal - Bloque <span class="etiqueta">H-BLOQUE</span></h3>
+        <div class="centrado-horizontal-bloque">
+            Bloque centrado con margin: auto
+        </div>
+
+        <h3>Centrado Vertical - Inline <span class="etiqueta">V-INLINE</span></h3>
+        <div class="centrado-vertical-inline">
+            Texto centrado verticalmente con line-height
+        </div>
+
+        <h3>Centrado Vertical - Bloque <span class="etiqueta">V-BLOQUE</span></h3>
+        <div class="centrado-vertical-bloque">
+            <div>Centrado con position</div>
+        </div>
+    </div>
+
+    <div class="display-section">
+        <h2>5. POSITION: static, relative, fixed, absolute, sticky + Z-INDEX</h2>
+        
+        <div class="position-container">
+            <div class="posicion-static">
+                <span class="etiqueta">STATIC</span>
+                Position: static (por defecto)
+            </div>
+            <div class="posicion-relative">
+                <span class="etiqueta">RELATIVE</span>
+                Position: relative (desplazado hacia arriba, izquierda)
+            </div>
+            <div class="posicion-absolute">
+                <span class="etiqueta">ABSOLUTE</span>
+                Position: absolute (esquina superior derecha)
+            </div>
+        </div>
+
+        <div class="posicion-sticky">
+            <span class="etiqueta">STICKY</span>
+            Position: sticky - Me quedo pegado al scroll
+        </div>
+
+        <p style="margin: 20px 0;">Botón fixed en la esquina inferior derecha.</p>
+    </div>
+
+    <div class="display-section">
+        <h2>6. COLUMNAS: column-count, column-gap, column-rule</h2>
+        <span class="etiqueta">COLUMNS</span>
+        
+        <div class="columnas">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        </div>
+    </div>
+
+    <div class="display-section">
+        <h2>7. FLOTANTES: float left, float right, clear both + CLEARFIX HACK</h2>
+        
+        <div class="flotantes-container clearfix">
+            <div class="float-left">
+                <span class="etiqueta">FLOAT-LEFT</span>
+                <p>Esta caja flota a la izquierda.</p>
+            </div>
+            
+            <div class="float-right">
+                <span class="etiqueta">FLOAT-RIGHT</span>
+                <p>Esta caja flota a la derecha.</p>
+            </div>
+            
+            <div class="clear-both">
+                <span class="etiqueta">CLEAR-BOTH</span>
+                Este elemento tiene clear: both, por lo que se posiciona debajo de los elementos flotantes
+            </div>
+        </div>
+
+        <p style="margin-top: 15px;"><strong>Clearfix Hack:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    </div>
+
+    <div class="posicion-fixed">
+        <span class="etiqueta">FIXED</span>
+        Botón Position Fixed
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    padding: 1rem;
+    gap: 10px;
+}
+
+.caja {
+    width: 1000px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+
+}
+
+.caja.vacio {
+    height: 40px;
+}
+
+a.caja {
+    border: 1px solid white; 
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.formulario {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.seccion {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.verde {
+  background-color: #d4edda;
+}
+
+.azul {
+  background-color: #d1ecf1;
+}
+
+.morado {
+  background-color: #e2d6f3;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+

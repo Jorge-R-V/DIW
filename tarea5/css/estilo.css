@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+}
+
+header, nav, main, section, .container {
+    margin: 20px auto;
+    width: 90%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow:row wrap;
+    height: 5em;
+}
+
+nav li {
+    background-color: red;
+    border: none;
+    flex-basis: 20%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: safe;
+}
+
+nav li:nth-child(2), nav li:nth-child(4) {
+    background-color: cadetblue;
+    align-self: flex-start;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(3,20%);
+    grid-template-rows: repeat(3,auto);
+    place-items: stretch stetch;
+    place-content: stretch space-around;
+    height: 10em;
+}
+
+section article:nth_child(2) {
+    background-color: hotpink;
+    grid-row: 1/4;
+    grid-column: 2/3;
+    grid: 1 1 1 4;
+}
+
+footer{
+    height: 10em;
+    display: grid;
+    grid-template-areas: 
+        "rrss rrss rrss"
+        "con . . con"
+        ". cop cop .";
+}
+
+#rrss {
+    background-color: salmon;
+    grid-area: rrss;
+}
+
+#contact {
+    background-color: skyblue;
+    grid-area: con;
+}
+
+#copy {
+    background-color: aliceblue;
+    grid-area: cop;
+}

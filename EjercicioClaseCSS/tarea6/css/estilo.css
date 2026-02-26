@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+
+header {
+    text-align: center;
+    padding: 20px 0 40px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+.portfolio-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr); 
+    grid-auto-rows: 1fr;
+    gap: 15px; 
+    padding: 0 15px;
+}
+
+
+.foto {
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.item-span-2 {
+    grid-row-end: span 2;
+}
+
+.item-span-3 {
+    grid-row-end: span 3;
+}
+
+.item-span-5 {
+    grid-row-end: span 5;
+}
+
+.item-span-7 {
+    grid-row-end: span 7;
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .item-span-2,
+    .item-span-3,
+    .item-span-5,
+    .item-span-7 {
+        grid-row-end: span 2; /* Todos ocupan 2 filas como máximo */
+    }
+}
