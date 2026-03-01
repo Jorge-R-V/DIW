@@ -1,5 +1,7 @@
 # NutriTrack - Nutrición Inteligente
 
+**🚀 Despliegue en vivo:** [https://jorge-r-v.github.io/DIW/](https://jorge-r-v.github.io/DIW/)
+
 **NutriTrack** es una aplicación web diseñada para ayudarte a llevar un control preciso de tu ingesta calórica y actividad física. NutriTrack facilita el seguimiento de tus macronutrientes diarios y te motiva a alcanzar tus objetivos de salud.
 
 ## Características Principales
